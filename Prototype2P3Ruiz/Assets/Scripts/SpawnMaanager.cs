@@ -13,7 +13,7 @@ public class SpawnMaanager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("SpawnRandoemAniaml", startDelay, spawnInterval);
+        InvokeRepeating("SpawnRandomAnimal", startDelay, spawnInterval);
     }
 
     // Update is called once per frame
@@ -21,11 +21,10 @@ public class SpawnMaanager : MonoBehaviour
     {
         
     }
-        void SpawnRandomAnimal()
-        {
-            int animalIndex = Random.Range(0, animalPrefabs.Length);
-            Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
-
-            Instantiate(animalPrefabs[animalIndex], spawnPos, animalPrefabs[animalIndex].transform.rotation);
-        }
+    void SpawnRandomAnimal()
+    {
+    Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
+    int animalIndex = Random.Range(0, animalPrefabs.Length);
+    Instantiate(animalPrefabs[animalIndex], spawnPos, animalPrefabs[animalIndex].transform.rotation);
+    }
 }

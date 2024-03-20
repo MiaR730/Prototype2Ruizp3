@@ -790,6 +790,9 @@ MonoBehaviour:
   speed: 10
   xRange: 15
   projectilePrefab: {fileID: 666042561}
+  zMin: -1.5
+  zMax: 15.5
+  verticalInput: 0
 --- !u!1001 &259724666271545441
 PrefabInstance:
   m_ObjectHideFlags: 0
